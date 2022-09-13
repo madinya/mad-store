@@ -1,5 +1,5 @@
-import CategoryContainer from "./components/categories/category-container/category-container.component";
-
+import CategoryItem from "../category-item/category-item.component";
+import "./category-container.component.scss";
 const categories = [
   {
     id: 1,
@@ -28,8 +28,14 @@ const categories = [
   },
 ];
 
-const App = () => {
-  return <CategoryContainer categories={categories} />;
+const CategoryContainer = () => {
+  return (
+    <div className="categories-container">
+      {categories.map((category) => {
+        return <CategoryItem key={category.id} category={category} />;
+      })}
+    </div>
+  );
 };
 
-export default App;
+export default CategoryContainer;
