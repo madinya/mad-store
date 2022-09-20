@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/mad-store/static/css/main.71759cb4.css",
-    "main.js": "/mad-store/static/js/main.9ba2bae6.js",
-    "static/js/787.cd90fee9.chunk.js": "/mad-store/static/js/787.cd90fee9.chunk.js",
-    "static/media/crown.svg": "/mad-store/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
-    "index.html": "/mad-store/index.html",
-    "main.71759cb4.css.map": "/mad-store/static/css/main.71759cb4.css.map",
-    "main.9ba2bae6.js.map": "/mad-store/static/js/main.9ba2bae6.js.map",
-    "787.cd90fee9.chunk.js.map": "/mad-store/static/js/787.cd90fee9.chunk.js.map"
+    "main.css": "/static/css/main.16f4658e.css",
+    "main.js": "/static/js/main.6845cb2d.js",
+    "static/js/787.cd90fee9.chunk.js": "/static/js/787.cd90fee9.chunk.js",
+    "static/media/crown.svg": "/static/media/crown.3a4e2b15908e7a4c25343677d232b7e6.svg",
+    "index.html": "/index.html",
+    "main.16f4658e.css.map": "/static/css/main.16f4658e.css.map",
+    "main.6845cb2d.js.map": "/static/js/main.6845cb2d.js.map",
+    "787.cd90fee9.chunk.js.map": "/static/js/787.cd90fee9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.71759cb4.css",
-    "static/js/main.9ba2bae6.js"
+    "static/css/main.16f4658e.css",
+    "static/js/main.6845cb2d.js"
   ]
 }
