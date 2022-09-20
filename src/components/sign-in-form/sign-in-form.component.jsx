@@ -2,14 +2,12 @@ import { getRedirectResult } from "firebase/auth";
 import { useEffect, useState } from "react";
 import {
   auth,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
   signInWithGooglePopup,
 } from "../../utils/firebase/firebase.utils";
 import ButtonCustom from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
 import "./sign-in-form.component.scss";
-
 const defaultFormFields = {
   email: "",
   password: "",
@@ -18,20 +16,15 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
   useEffect(() => {
     async function getResult() {
-      const response = await getRedirectResult(auth);
-      if (response) {
-        await createUserDocumentFromAuth(response.user);
-      }
+      await getRedirectResult(auth);
     }
     getResult();
   }, []);
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const resetFormFields = () => {
@@ -42,11 +35,7 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      console.log(response);
+      await signInAuthUserWithEmailAndPassword(email, password);
       resetFormFields();
     } catch (err) {
       switch (err.code) {
